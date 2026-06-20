@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Greeting -->
+        <section class="card">
+            <h1 id="greeting">Good Morning</h1>
+
+            <div class="name-section">
+                <input type="text" id="username" placeholder="Masukkan nama">
+                <button onclick="saveName()">Simpan Nama</button>
+            </div>
+
+            <p id="date"></p>
+            <p id="clock"></p>
+        </section>
+
+        <!-- Focus Timer -->
+        <section class="card">
+            <h2>Focus Timer</h2>
+
+            <div id="timer">25:00</div>
+
+            <div class="button-group">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </section>
+
+        <!-- To Do List -->
+        <section class="card">
+            <h2>To Do List</h2>
+
+            <div class="todo-input">
+                <input type="text" id="taskInput" placeholder="Tambah tugas">
+                <button onclick="addTask()">Tambah</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="card">
+            <h2>Quick Links</h2>
+
+            <div class="link-input">
+                <input type="text" id="linkName" placeholder="Nama Link">
+                <input type="text" id="linkUrl" placeholder="https://...">
+                <button onclick="addLink()">Tambah Link</button>
+            </div>
+
+            <div id="linksContainer"></div>
+        </section>
+
+        <!-- Dark Mode -->
+        <section class="card">
+            <button onclick="toggleDarkMode()">
+                🌙 Light / Dark Mode
+            </button>
+        </section>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
